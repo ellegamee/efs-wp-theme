@@ -24,7 +24,7 @@ wp-config.php
 /wp-content/themes/twenty*/
 
 # Example plugin
-/wp-content/plugins/hello.php
+/wp-content/plugins/
 
 # Uploads
 /wp-content/uploads/
@@ -35,14 +35,12 @@ wp-config.php
 # htaccess
 /.htaccess
 
-# All plugins
-#
-# Note: If you wish to whitelist plugins,
-# uncomment the next line
-#/wp-content/plugins
+# Ignore local EFS child theme (untracked locally)
+# If you want to commit the theme, remove this entry or change it.
+/wp-content/themes/efs/
 
-# All themes
-#
-# Note: If you wish to whitelist themes,
-# uncomment the next line
-#/wp-content/themes
+# DDEV: ignore everything in .ddev except key config files we want in repo
+/.ddev/*
+!.ddev/config.yaml
+!.ddev/docker-compose.*.yaml
+!.ddev/providers.yaml
