@@ -1,5 +1,4 @@
 <?php
-<?php
 // Minimal enqueue for child theme styles
 add_action( 'wp_enqueue_scripts', function() {
     wp_enqueue_style(
