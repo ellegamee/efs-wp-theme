@@ -37,7 +37,7 @@ wp-config.php
 
 # Ignore local EFS child theme (untracked locally)
 # If you want to commit the theme, remove this entry or change it.
-/wp-content/themes/efs/
+!/wp-content/themes/efs/
 
 # DDEV: ignore everything in .ddev except key config files we want in repo
 /.ddev/*
