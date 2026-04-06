@@ -8,3 +8,5 @@ add_action( 'wp_enqueue_scripts', function() {
         wp_get_theme( get_stylesheet() )->get( 'Version' )
     );
 }, 20 );
+
+include_once get_stylesheet_directory() .'/include/patterns.php';

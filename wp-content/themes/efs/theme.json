@@ -1,6 +1,6 @@
 {
 	"$schema": "https://schemas.wp.org/wp/6.7/theme.json",
-	"version": 1,
+	"version": 2,
 	"title": "EFS Färger",
 	"settings": {
 		"color": {
@@ -66,5 +66,12 @@
 				}
 			}
 		}
-	}
+	},
+	"templateParts": [
+    {
+      "area": "uncategorized",
+      "name": "efs-test",
+      "title": "Mitt roliga test"
+    }
+  ]
 }

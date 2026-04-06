@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Footer
- * Slug: twentytwentyfive/footer
+ * Slug: efs/footer
  * Categories: footer
  * Block Types: core/template-part/footer
  * Description: Footer columns with logo, title, tagline and links.
