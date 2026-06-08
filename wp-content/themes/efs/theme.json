@@ -212,19 +212,10 @@
 			},
 			"core/button": {
 				"variations": {
-					"outline": {
-						"border": {
-							"color": "currentColor",
-							"width": "1px"
-						},
-						"css": ".wp-block-button__link:not(.has-background):hover {background-color:color-mix(in srgb, var(--wp--preset--color--contrast) 5%, transparent);}",
-						"spacing": {
-							"padding": {
-								"bottom": "calc(1rem - 1px)",
-								"left": "calc(2.25rem - 1px)",
-								"right": "calc(2.25rem - 1px)",
-								"top": "calc(1rem - 1px)"
-							}
+					"fill": {
+						"color": {
+							"background": "var:preset|color|accent-1",
+							"text": "var:preset|color|base"
 						}
 					}
 				}
@@ -536,7 +527,7 @@
 					"width": "0 0 1px 0"
 				},
 				"color": {
-					"text": "var:preset|color|accent-6"
+					"text": "var:preset|color|contrast"
 				},
 				"variations": {
 					"wide": {
@@ -595,9 +586,15 @@
 		},
 		"elements": {
 			"button": {
+				"border": {
+					"color": "currentColor",
+					"style": "solid",
+					"width": "2px",
+					"radius": "99px"
+				},
 				"color": {
-					"background": "var:preset|color|contrast",
-					"text": "var:preset|color|base"
+					"background": "transparent",
+					"text": "var:preset|color|contrast"
 				},
 				":focus": {
 					"outline": {
@@ -607,11 +604,11 @@
 				},
 				":hover": {
 					"color": {
-						"background": "color-mix(in srgb, var(--wp--preset--color--contrast) 85%, transparent)",
-						"text": "var:preset|color|base"
+						"background": "color-mix(in srgb, var(--wp--preset--color--contrast) 20%, transparent)",
+						"text": "var:preset|color|contrast"
 					},
 					"border": {
-						"color": "transparent"
+						"color": "var:preset|color|contrast"
 					}
 				},
 				"spacing": {
@@ -623,7 +620,9 @@
 					}
 				},
 				"typography": {
-					"fontSize": "var:preset|font-size|medium"
+					"fontSize": "var:preset|font-size|medium",
+					"textAlign": "center",
+					"fontWeight": "500"
 				}
 			},
 			"caption": {
@@ -684,38 +683,7 @@
 				}
 			}
 		},
-		"variations": {
-			"section-2": {
-				"elements": {
-					"button": {
-						"color": {
-							"background": "var:preset|color|base",
-							"text": "var:preset|color|contrast"
-						},
-						":hover": {
-							"color": {
-								"background": "color-mix(in srgb, var(--wp--preset--color--base) 85%, transparent)"
-							}
-						}
-					}
-				}
-			},
-			"section-4": {
-				"elements": {
-					"button": {
-						"color": {
-							"background": "var:preset|color|accent-1",
-							"text": "var:preset|color|contrast"
-						},
-						":hover": {
-							"color": {
-								"background": "color-mix(in srgb, var(--wp--preset--color--accent-1) 85%, transparent)"
-							}
-						}
-					}
-				}
-			}
-		}
+		"variations": {}
 	},
 	"templateParts": [
 		{
