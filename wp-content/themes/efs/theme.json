@@ -497,24 +497,19 @@
 				}
 			},
 			"core/search": {
-				"css": "& .wp-block-search__input{border-radius:3.125rem;padding-left:1.5625rem;padding-right:1.5625rem;border-color:var(--wp--preset--color--accent-6);}",
 				"typography": {
 					"fontSize": "var:preset|font-size|medium",
-					"lineHeight": "1.6"
+					"lineHeight": "1.2"
 				},
 				"elements": {
 					"button": {
 						"border": {
-							"radius": "3.125rem"
+							"radius": "99px",
+							"width": "2px"
 						},
 						"spacing": {
 							"margin": {
-								"left": "1.125rem"
-							}
-						},
-						":hover": {
-							"border": {
-								"color": "transparent"
+								"left": "0"
 							}
 						}
 					}

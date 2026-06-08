@@ -1,0 +1,35 @@
+/*
+ * Search Block
+ */
+.wp-block-search .wp-block-search__label {
+    font-size: var(--wp--preset--font-size--small);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.8rem;
+    opacity: 0.7;
+    font-weight: 600;
+    display: block;
+}
+
+.wp-block-search .wp-block-search__inside-wrapper {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+    gap: 12px;
+}
+
+.wp-block-search .wp-block-search__input {
+    border-radius: 99px !important;
+    padding: 0.8rem 1.5rem !important;
+    border: 2px solid currentColor !important;
+    background: transparent !important;
+    color: inherit !important;
+    flex-grow: 1 !important;
+    min-width: 0 !important;
+    width: auto !important;
+}
+
+.wp-block-search .wp-block-search__button {
+    flex-shrink: 0 !important;
+    width: auto !important;
+}

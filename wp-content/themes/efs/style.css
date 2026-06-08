@@ -12,6 +12,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: efs-tema
 Tags: full-site-editing, block-patterns
 */
+@import url('styles/core-search.css');
 
 /*
  * Link styles
@@ -43,7 +44,16 @@ a {
 }
 
 /* Reduce widows and orphans */
-h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+caption,
+figcaption,
+p {
 	text-wrap: pretty;
 }
 
