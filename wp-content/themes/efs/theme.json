@@ -55,6 +55,8 @@
 			"wideSize": "1340px"
 		},
 		"spacing": {
+			"margin": true, 
+			"padding": true,
 			"defaultSpacingSizes": false,
 			"spacingSizes": [
 				{
