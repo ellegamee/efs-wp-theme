@@ -9,8 +9,8 @@
  */
 
 ?>
-<!-- wp:group {"align":"full","backgroundColor":"accent-4","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-accent-4-background-color has-background" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
+<!-- wp:group {"backgroundColor":"accent-4","textColor":"accent-1","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-accent-1-color has-accent-4-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)">
     <!-- wp:heading {"textAlign":"center"} -->
     <h2 class="wp-block-heading has-text-align-center">Rubrik</h2>
     <!-- /wp:heading -->

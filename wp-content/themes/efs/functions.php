@@ -10,6 +10,7 @@
 $efs_includes = array(
 	'setup.php',
 	'patterns.php',
+	'enable-linked-groups/enable-linked-groups.php'
 );
 
 foreach ( $efs_includes as $file ) {

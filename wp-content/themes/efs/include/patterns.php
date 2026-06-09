@@ -17,8 +17,9 @@ add_action( 'init', function() {
 	$pattern_file = get_stylesheet_directory() . '/patterns/full-width-section.php';
 	
 	if ( file_exists( $pattern_file ) ) {
-		$content = file_get_contents( $pattern_file );
-		$content = preg_replace( '/<\?php.*?\?>/s', '', $content ); // Ta bort PHP-header
+		ob_start();
+		include $pattern_file;
+		$content = ob_get_clean();
 		$content = trim( $content );
 
 		register_block_pattern(
@@ -36,8 +37,9 @@ add_action( 'init', function() {
 	$pattern_file = get_stylesheet_directory() . '/patterns/contact-card.php';
 	
 	if ( file_exists( $pattern_file ) ) {
-		$content = file_get_contents( $pattern_file );
-		$content = preg_replace( '/<\?php.*?\?>/s', '', $content ); // Ta bort PHP-header
+		ob_start();
+		include $pattern_file;
+		$content = ob_get_clean();
 		$content = trim( $content );
 
 		register_block_pattern(
@@ -55,8 +57,9 @@ add_action( 'init', function() {
 	$pattern_file = get_stylesheet_directory() . '/patterns/contact-card-no-image.php';
 	
 	if ( file_exists( $pattern_file ) ) {
-		$content = file_get_contents( $pattern_file );
-		$content = preg_replace( '/<\?php.*?\?>/s', '', $content ); // Ta bort PHP-header
+		ob_start();
+		include $pattern_file;
+		$content = ob_get_clean();
 		$content = trim( $content );
 
 		register_block_pattern(
@@ -64,6 +67,26 @@ add_action( 'init', function() {
 			array(
 				'title'       => __( 'Kontaktkort (Utan bild)', 'efs-tema' ),
 				'categories'  => array( 'efs', 'featured', 'kontakt' ),
+				'content'     => $content,
+			)
+		);
+	}
+}, 20 );
+
+add_action( 'init', function() {
+	$pattern_file = get_stylesheet_directory() . '/patterns/shortcut-columns.php';
+	
+	if ( file_exists( $pattern_file ) ) {
+		ob_start();
+		include $pattern_file;
+		$content = ob_get_clean();
+		$content = trim( $content );
+
+		register_block_pattern(
+			'efs/shortcut-columns',
+			array(
+				'title'       => __( 'Genvägsrader', 'efs-tema' ),
+				'categories'  => array( 'efs', 'featured' ),
 				'content'     => $content,
 			)
 		);

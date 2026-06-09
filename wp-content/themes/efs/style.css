@@ -1,68 +1,44 @@
 /*
 Theme Name: EFS Tema
-Author: Elias Axonov
-Author URI: https://axonov.com
-Description: EFS Tema – ett fristående blocktema för EFS (Evangeliska Fosterlands-Stiftelsen).
-Requires at least: 6.7
-Tested up to: 6.9
-Requires PHP: 7.2
+Author: Your Name
 Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: efs-tema
-Tags: full-site-editing, block-patterns
 */
-@import url('styles/core-search.css');
 
-/*
- * Link styles
- */
-a {
-	text-decoration-thickness: 1px !important;
-	text-underline-offset: .1em;
+/* Styles for the clickable shortcut pattern */
+.wp-block-group.is-clickable-shortcut {
+    display: flex; /* Use flexbox to arrange content */
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-decoration: none; /* Remove underline from the link */
+    color: inherit; /* Inherit color from parent .wp-block-group (the outer one) */
+    padding: 20px; /* Add some padding around the content */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    height: 100%; /* Make sure it fills the column height */
+    width: 100%; /* Make sure it fills the column width */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-/* Focus styles */
-:where(.wp-site-blocks *:focus) {
-	outline-width: 2px;
-	outline-style: solid;
+.wp-block-group.is-clickable-shortcut:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Subtle background change on hover */
+    cursor: pointer;
 }
 
-/* Increase the bottom margin on submenus, so that the outline is visible. */
-.wp-block-navigation .wp-block-navigation-submenu .wp-block-navigation-item:not(:last-child) {
-	margin-bottom: 3px;
+.wp-block-group.is-clickable-shortcut .wp-block-image {
+    margin-bottom: 10px; /* Space between image and text */
+    margin-top: 0; /* Remove default figure margins */
+    margin-left: 0;
+    margin-right: 0;
 }
 
-/* Increase the outline offset on the parent menu items */
-.wp-block-navigation .wp-block-navigation-item .wp-block-navigation-item__content {
-	outline-offset: 4px;
+.wp-block-group.is-clickable-shortcut img {
+    max-width: 200px; /* Max width as requested */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure it behaves as a block element */
 }
 
-/* Remove outline offset from submenus */
-.wp-block-navigation .wp-block-navigation-item ul.wp-block-navigation__submenu-container .wp-block-navigation-item__content {
-	outline-offset: 0;
-}
-
-/* Reduce widows and orphans */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-blockquote,
-caption,
-figcaption,
-p {
-	text-wrap: pretty;
-}
-
-/* More block as block-level element */
-.more-link {
-	display: block;
-}
-
-/* Prevent scrollbars on preformatted text */
-:where(pre) {
-	overflow-x: auto;
+.wp-block-group.is-clickable-shortcut p {
+    margin-top: 0; /* Remove default paragraph top margin */
+    margin-bottom: 0; /* Remove default paragraph bottom margin */
+    text-align: center; /* Ensure text is centered */
 }
